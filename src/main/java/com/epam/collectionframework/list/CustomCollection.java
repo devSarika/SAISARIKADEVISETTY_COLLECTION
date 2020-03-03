@@ -38,6 +38,7 @@ public class CustomCollection {
 				newcusList[i-1]=cusList[i];
 			}
 			cusList=newcusList;
+			count--;
 		}
 		catch(Exception e)
 		{
@@ -61,12 +62,12 @@ public class CustomCollection {
 	public void fetch(int idx)
 	{
 		try {
-			System.out.println("Element at"+idx+"is"+cusList[idx]);
+			System.out.println("Element at"+idx+"is "+cusList[idx]);
 			
 		}
 		catch(Exception e)
 		{
-			System.out.println("Exception caught+e");
+			System.out.println("Exception caught"+e);
 			
 		}
 		
