@@ -25,11 +25,10 @@ public class CustomCollection {
 	}
 	public void remove(int idx)
 	{
-		Object[] newcusList=new Object[count];
-		if(idx>count)
-			System.out.println("Element Index out of Bound ");
-		else
-		{
+		try {
+			Object[] newcusList=new Object[count];
+			
+			
 			for(int i=0;i<idx;i++)
 			{
 				newcusList[i]=cusList[i];
@@ -39,8 +38,15 @@ public class CustomCollection {
 				newcusList[i-1]=cusList[i];
 			}
 			cusList=newcusList;
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception caught"+e);
 			
 		}
+		
+			
+		
 		
 		
 	}
@@ -54,11 +60,18 @@ public class CustomCollection {
 	}
 	public void fetch(int idx)
 	{
-		if(idx>count)
-			System.out.println("Element Index out of Bound ");
-		else
+		try {
 			System.out.println("Element at"+idx+"is"+cusList[idx]);
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception caught+e");
+			
+		}
 		
+	
+			
 	}
 	public void createNewList() {
 		int newCapacity=cusList.length*2;
